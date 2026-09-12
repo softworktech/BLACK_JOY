@@ -59,7 +59,7 @@ export function FeaturedProducts() {
                       <div className="aspect-square relative overflow-hidden">
                         <img
                           src={
-                            product.image_url || (product.image ? `https://softworktech.com/SIYAM/storage/${product.image}` : "/placeholder.svg")
+                            product.image_url || (product.image ? `https://softworktech.com/SIYAM/storage/app/public/${product.image}` : "/placeholder.svg")
                           }
                           alt={product.name}
                           className="w-full h-full object-contain transition-none"

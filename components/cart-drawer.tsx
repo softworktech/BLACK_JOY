@@ -283,7 +283,7 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
                     {/* Product Image */}
                     <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border relative">
                       <img
-                        src={item.image_url || (item.image && item.image.trim() !== "" ? (item.image.startsWith('http') ? item.image : `https://softworktech.com/SIYAM/storage/${item.image}`) : "/placeholder.svg")}
+                        src={item.image_url || (item.image && item.image.trim() !== "" ? (item.image.startsWith('http') ? item.image : `https://softworktech.com/SIYAM/storage/app/public/${item.image}`) : "/placeholder.svg")}
                         alt={item.name || "Product Image"}
                         className="w-full h-full object-contain p-2"
                       />

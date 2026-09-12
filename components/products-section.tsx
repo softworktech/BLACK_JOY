@@ -39,7 +39,7 @@ export function ProductsSection() {
             ...p,
             inStock: p.in_stock !== undefined ? (Boolean(p.in_stock) && Number(p.stock_count) > 0) : true,
             oldPrice: p.old_price,
-            image_url: p.image_url || (p.image ? `https://softworktech.com/SIYAM/storage/${p.image}` : null)
+            image_url: p.image_url || (p.image ? `https://softworktech.com/SIYAM/storage/app/public/${p.image}` : null)
           }))
         } else {
           productsList = []

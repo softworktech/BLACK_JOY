@@ -151,8 +151,8 @@ export default function AdminRequests() {
                 <Label className="mb-2 block">Attached Images</Label>
                 <div className="flex gap-2 overflow-x-auto pb-2">
                   {selectedReq.images.map((imgObj: any, idx: number) => (
-                    <a key={idx} href={`${process.env.NEXT_PUBLIC_STORAGE_URL || 'https://softworktech.com/SIYAM/storage'}/${imgObj.image_path}`} target="_blank" rel="noreferrer" className="shrink-0 relative group rounded-md overflow-hidden border">
-                      <img src={`${process.env.NEXT_PUBLIC_STORAGE_URL || 'https://softworktech.com/SIYAM/storage'}/${imgObj.image_path}`} alt={`Attachment ${idx+1}`} className="h-24 w-24 object-cover" />
+                    <a key={idx} href={`${process.env.NEXT_PUBLIC_STORAGE_URL || 'https://softworktech.com/SIYAM/storage/app/public'}/${imgObj.image_path}`} target="_blank" rel="noreferrer" className="shrink-0 relative group rounded-md overflow-hidden border">
+                      <img src={`${process.env.NEXT_PUBLIC_STORAGE_URL || 'https://softworktech.com/SIYAM/storage/app/public'}/${imgObj.image_path}`} alt={`Attachment ${idx+1}`} className="h-24 w-24 object-cover" />
                       <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <ExternalLink className="text-white h-5 w-5" />
                       </div>

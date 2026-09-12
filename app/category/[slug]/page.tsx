@@ -351,7 +351,7 @@ export default function CategoryPage() {
                             className="relative aspect-square flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden"
                           >
                             <img
-                              src={(product as any).image_url || (product.image?.trim() ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/${product.image}`) : "/placeholder.svg")}
+                              src={(product as any).image_url || (product.image?.trim() ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/app/public/${product.image}`) : "/placeholder.svg")}
                               alt={product.name || "Product Image"}
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             />

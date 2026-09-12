@@ -242,7 +242,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                     </span>
                   )}
                   <img
-                    src={product?.image_url || (product?.image ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/${product.image}`) : "/placeholder.svg")}
+                    src={product?.image_url || (product?.image ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/app/public/${product.image}`) : "/placeholder.svg")}
                     alt={product?.name || "Product"}
                     className="w-full h-full object-cover transition-transform duration-200 ease-out"
                     style={{ transform: `scale(${imageScale})`, transformOrigin: `${imagePosition.x}% ${imagePosition.y}%` }}
@@ -339,7 +339,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                               <Link href={`/product/${product.id}`} className="relative flex items-center justify-center overflow-hidden h-[150px] sm:h-[180px] md:h-[220px] bg-gradient-to-br from-gray-50 to-gray-100">
                                 <div className="relative aspect-square flex items-center justify-center overflow-hidden w-full h-full cursor-pointer">
                                   <img
-                                    src={product.image_url || (product.image ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/${product.image}`) : "/placeholder.svg")}
+                                    src={product.image_url || (product.image ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/app/public/${product.image}`) : "/placeholder.svg")}
                                     alt={product.name}
                                     className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500 ease-out"
                                   />

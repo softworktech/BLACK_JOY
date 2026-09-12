@@ -91,7 +91,7 @@ function SearchResults() {
                   <Link href={`/product/${product.id}`} className="block relative">
                     <div className="aspect-square bg-white p-4 relative overflow-hidden">
                       <img
-                        src={product.image_url || (product.image ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/${product.image}`) : "/placeholder.svg")}
+                        src={product.image_url || (product.image ? (product.image.startsWith('http') ? product.image : `https://softworktech.com/SIYAM/storage/app/public/${product.image}`) : "/placeholder.svg")}
                         alt={product.name}
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       />

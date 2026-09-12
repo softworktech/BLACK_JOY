@@ -164,7 +164,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       <img
                         src={
                           product.image && product.image.trim() !== "" && !product.image.includes("placeholder.svg")
-                            ? (product.image.startsWith("http") ? product.image : `https://softworktech.com/SIYAM/storage/${product.image}`)
+                            ? (product.image.startsWith("http") ? product.image : `https://softworktech.com/SIYAM/storage/app/public/${product.image}`)
                             : "/placeholder.svg"
                         }
                         alt={product.name || "Product Image"}
