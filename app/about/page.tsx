@@ -25,30 +25,20 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
 
           {/* Content */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative z-10 text-center px-6"
-          >
+          <div className="relative z-10 text-center px-6">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-wide drop-shadow-md">
               Dose care - About Us
             </h1>
             <p className="text-xl text-gray-200 mt-4 max-w-2xl mx-auto leading-relaxed">
               We are a dedicated team providing you with premium electronics, smart gadgets, and quality tech accessories at the best prices.
             </p>
-          </motion.div>
+          </div>
         </section>
 
         {/* 🍀 ABOUT SECTION */}
         <section className="py-20 px-6 md:px-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }} 
-              animate={{ opacity: 1, x: 0 }} 
-              transition={{ delay: 0.2 }}
-              className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[450px]"
-            >
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[450px]">
               <Image 
                 src="/Hero.jpeg" 
                 alt="About Dose care" 
@@ -56,24 +46,15 @@ export default function AboutPage() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-            </motion.div>
+            </div>
 
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }} 
-              animate={{ opacity: 1, x: 0 }} 
-              transition={{ delay: 0.4 }}
-              className="space-y-6 text-gray-700 text-lg leading-relaxed"
-            >
+            <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
-                <span className="font-semibold text-orange-600">Dose care</span> is a trusted tech store
-                সরবরাহকারী প্রতিষ্ঠান, যারা দেশের বিভিন্ন অঞ্চলের
-                পরিশ্রমী কৃষকদের কাছ থেকে সরাসরি পণ্য সংগ্রহ করে।
-                আমরা নিশ্চিত করি যাতে পণ্যটি তার আসল স্বাদ, গন্ধ এবং
-                পুষ্টিমান অক্ষুণ্ণ রেখে ক্রেতার কাছে পৌঁছাতে পারে।
+                <span className="font-semibold text-orange-600">Dose care</span> is a trusted tech store, providing 100% authentic and original gadgets across Bangladesh. We source the best products from top brands to ensure quality and reliability.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mt-4">
-                আমাদের লক্ষ্য — <span className="font-semibold text-gray-800">
-                কৃষকের ন্যায্য মূল্য নিশ্চিত করা এবং ক্রেতার হাতে বিশুদ্ধ পণ্য পৌঁছে দেওয়া।
+                Our Mission — <span className="font-semibold text-gray-800">
+                To make premium electronics accessible and provide the best customer experience.
                 </span>
               </p>
             </div>
