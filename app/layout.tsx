@@ -1,4 +1,4 @@
-﻿// app/layout.tsx
+// app/layout.tsx
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
@@ -8,50 +8,46 @@ import { CartProvider } from "@/context/cart-context";
 
 // ✅ Server-side metadata
 export const metadata: Metadata = {
-  title: "Vtech Store",
+  title: "Dose care",
   description:
-    "Vtech Store - Online shop for all agro & grocery products in Bangladesh. Buy Oil, Ghee, Dates, Honey, Masala, Nuts & Seeds, Tea/Coffee, Honeycomb, Organic Zone, Pickles and more. Fast delivery & secure payments.",
+    "Dose care - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
   keywords: [
-    "Vtech Store", "Agro Products Bangladesh", "Grocery Products Online",
-    "Oil online Bangladesh", "Ghee online Bangladesh", "Dates Bangladesh",
-    "Honey online Bangladesh", "Masala online Bangladesh",
-    "Nuts & Seeds online", "Tea online Bangladesh", "Coffee online Bangladesh"
+    "Dose care", "Tech gadgets", "Electronics Online Store",
+    "Smartphones", "Laptops", "Smart home devices",
+    "Best electronics in BD", "Original gadgets",
   ],
-  authors: [{ name: "Vtech Store", url: "https://vtechstore.com" }],
-  generator: "MSTS",
-  robots: "index, follow",
-  metadataBase: new URL("https://vtechstore.com"),
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" },
-  ],
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
+  authors: [{ name: "Dose care", url: "https://dosecare.com" }],
+  creator: "Dose care",
+  publisher: "Dose care",
+  metadataBase: new URL("https://dosecare.com"),
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
-    title: "Vtech Store",
+    type: "website",
+    locale: "en_US",
+    url: "https://dosecare.com",
+    title: "Dose care",
     description:
-      "Shop all agro & grocery products online in Bangladesh. Oil, Ghee, Dates, Honey, Masala, Nuts & Seeds, Tea/Coffee, Honeycomb, Organic Zone, Pickles and more.",
-    url: "/", // relative, metadataBase সাথে যোগ হবে
-    siteName: "Vtech Store",
+      "Dose care - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
+    siteName: "Dose care",
     images: [
       {
-        url: "https://softworktech.com/NEED_AGRO/Need.png", // আপনার logo
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Vtech Store - Online Agro & Grocery Store",
+        alt: "Dose care - Online Tech & Electronics Store",
       },
     ],
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vtech Store",
+    title: "Dose care",
     description:
-      "Shop all agro & grocery products online in Bangladesh. Oil, Ghee, Dates, Honey, Masala, Nuts & Seeds, Tea/Coffee, Honeycomb, Organic Zone, Pickles and more.",
-    site: "@VtechStore",
-    images: ["https://softworktech.com/NEED_AGRO/Need.png"], // logo
+      "Dose care - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
+    site: "@DoseCare",
+    creator: "@DoseCare",
+    images: ["/og-image.jpg"],
   },
 };
 

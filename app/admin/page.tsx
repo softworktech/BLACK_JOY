@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import { ShoppingCart, DollarSign, Package, Users } from 'lucide-react';
@@ -122,26 +122,26 @@ export default function AdminDashboard() {
         </div>
         <div>
           {/* Order Status Summary */}
-          <Card className="h-full shadow-sm border-gray-100">
+          <Card className="h-full shadow-[0_8px_30px_rgba(0,0,0,0.04)] border-none rounded-2xl">
             <CardHeader className="pb-2">
-              <CardTitle className="text-base font-semibold text-gray-800">Order Status</CardTitle>
+              <CardTitle className="text-base font-bold text-slate-800">Order Status</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4 mt-2">
                 {[
-                  { label: 'Pending', count: orderStatusDist.pending, color: 'bg-yellow-500' },
-                  { label: 'Confirmed', count: orderStatusDist.confirmed, color: 'bg-blue-500' },
-                  { label: 'Processing', count: orderStatusDist.processing, color: 'bg-indigo-500' },
-                  { label: 'Out for Delivery', count: orderStatusDist.out_for_delivery, color: 'bg-purple-500' },
-                  { label: 'Delivered', count: orderStatusDist.delivered, color: 'bg-green-500' },
-                  { label: 'Cancelled', count: orderStatusDist.cancelled, color: 'bg-red-500' },
+                  { label: 'Pending', count: orderStatusDist.pending, color: 'bg-amber-500 shadow-amber-500/30' },
+                  { label: 'Confirmed', count: orderStatusDist.confirmed, color: 'bg-blue-500 shadow-blue-500/30' },
+                  { label: 'Processing', count: orderStatusDist.processing, color: 'bg-indigo-500 shadow-indigo-500/30' },
+                  { label: 'Out for Delivery', count: orderStatusDist.out_for_delivery, color: 'bg-purple-500 shadow-purple-500/30' },
+                  { label: 'Delivered', count: orderStatusDist.delivered, color: 'bg-emerald-500 shadow-emerald-500/30' },
+                  { label: 'Cancelled', count: orderStatusDist.cancelled, color: 'bg-rose-500 shadow-rose-500/30' },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center justify-between">
+                  <div key={item.label} className="flex items-center justify-between p-2 hover:bg-slate-50 rounded-lg transition-colors">
                     <div className="flex items-center gap-3">
-                      <div className={`w-3 h-3 rounded-full ${item.color}`}></div>
-                      <span className="text-sm text-gray-600">{item.label}</span>
+                      <div className={`w-3 h-3 rounded-full shadow-sm ${item.color}`}></div>
+                      <span className="text-sm font-medium text-slate-600">{item.label}</span>
                     </div>
-                    <span className="font-medium">{item.count}</span>
+                    <span className="font-bold text-slate-700">{item.count}</span>
                   </div>
                 ))}
               </div>
@@ -151,9 +151,9 @@ export default function AdminDashboard() {
       </div>
 
       {/* Recent Orders */}
-      <Card className="shadow-sm border-gray-100">
+      <Card className="shadow-[0_8px_30px_rgba(0,0,0,0.04)] border-none rounded-2xl">
         <CardHeader className="pb-2">
-          <CardTitle className="text-base font-semibold text-gray-800">Recent Orders</CardTitle>
+          <CardTitle className="text-base font-bold text-slate-800">Recent Orders</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="overflow-x-auto">

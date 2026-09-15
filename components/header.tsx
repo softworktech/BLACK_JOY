@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import type React from "react";
 import Image from "next/image";
@@ -64,11 +64,11 @@ function MobileMenu({ isOpen, onClose, categories }: MobileMenuProps) {
                   key={cat.id}
                   href={`/category/${cat.id}`}
                   onClick={onClose}
-                  className={`block px-3 py-2 rounded text-sm font-medium
+                  className={`block px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300
                     ${
                       isActive
-                        ? "bg-gray-100 text-orange-600"
-                        : "text-gray-700 hover:bg-gray-100 hover:text-orange-600"
+                        ? "bg-orange-50 text-orange-600 shadow-sm border border-orange-100"
+                        : "text-slate-600 hover:bg-slate-50 hover:text-orange-600 border border-transparent"
                     }
                   `}
                 >
@@ -169,27 +169,37 @@ export function Header() {
   /* ================= JSX ================= */
   return (
     <>
-      <header className="bg-white shadow-md sticky top-0 z-50">
+      <header className="bg-white/90 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.05)] border-b border-slate-100 sticky top-0 z-50 transition-all duration-300">
         {/* ===== Top Bar ===== */}
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-10 w-10">
-              <Image src="/logo.png" alt="Logo" fill className="rounded-full" />
+        <div className="container mx-auto px-4 py-3 lg:py-4 flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative h-12 w-12 bg-gradient-to-tr from-orange-50 to-blue-50 rounded-xl flex items-center justify-center shadow-sm border border-slate-100 group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+              <Image src="/logo.png" alt="Logo" fill className="object-contain p-1" />
             </div>
-            <div className="hidden sm:block">
-              <div className="text-xl font-bold text-primary">Vtech Store</div>
-              <div className="text-xs text-muted-foreground">
-                A to Z Agro & Grocery Products
+            <div className="hidden sm:flex flex-col justify-center">
+              <div className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 tracking-tight group-hover:from-orange-600 group-hover:to-orange-400 transition-all duration-300">Dose care</div>
+              <div className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mt-0.5">
+                Your Trusted Tech Store
               </div>
             </div>
           </Link>
 
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" onClick={() => setSearchModalOpen(true)}>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setSearchModalOpen(true)}
+              className="hover:bg-slate-100 rounded-full text-slate-600 hover:text-orange-500 transition-colors"
+            >
               <Search className="h-5 w-5" />
             </Button>
 
-            <Button variant="ghost" size="icon" onClick={() => setRequestDrawerOpen(true)}>
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              onClick={() => setRequestDrawerOpen(true)}
+              className="hover:bg-slate-100 rounded-full text-slate-600 hover:text-orange-500 transition-colors hidden sm:inline-flex"
+            >
               <FileText className="h-5 w-5" />
             </Button>
 
@@ -197,11 +207,13 @@ export function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setFavoritesDrawerOpen(true)}
-              className="relative"
+              className="relative hover:bg-slate-100 rounded-full text-slate-600 hover:text-orange-500 transition-colors"
             >
               <Heart className="h-5 w-5" />
               {favoritesCount > 0 && (
-                <span className="badge">{favoritesCount}</span>
+                <span className="absolute 1 top-0 right-0 w-4 h-4 bg-orange-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-md border-2 border-white translate-x-1/4 -translate-y-1/4">
+                  {favoritesCount}
+                </span>
               )}
             </Button>
 
@@ -209,26 +221,30 @@ export function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setCartDrawerOpen(true)}
-              className="relative"
+              className="relative hover:bg-slate-100 rounded-full text-slate-600 hover:text-orange-500 transition-colors"
             >
               <ShoppingCart className="h-5 w-5" />
-              {cartCount > 0 && <span className="badge">{cartCount}</span>}
+              {cartCount > 0 && (
+                <span className="absolute top-0 right-0 w-4 h-4 bg-blue-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-md border-2 border-white translate-x-1/4 -translate-y-1/4">
+                  {cartCount}
+                </span>
+              )}
             </Button>
 
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden"
+              className="lg:hidden hover:bg-slate-100 rounded-full text-slate-600 hover:text-orange-500 transition-colors ml-1"
               onClick={() => setMobileMenuOpen(true)}
             >
-              <Menu className="h-5 w-5" />
+              <Menu className="h-6 w-6" />
             </Button>
           </div>
         </div>
 
         {/* ===== Desktop Category Scroll ===== */}
         {categories.length > 0 && (
-          <div className="hidden lg:block border-t relative bg-white">
+          <div className="hidden lg:block border-t border-slate-100 relative bg-slate-50/50">
             {showLeft && (
               <button
                 onClick={() =>
@@ -237,9 +253,9 @@ export function Header() {
                     behavior: "smooth",
                   })
                 }
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow rounded-full p-2"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-slate-100 rounded-full p-2 text-slate-500 hover:text-orange-500 transition-colors ml-2"
               >
-                <ChevronLeft />
+                <ChevronLeft size={18} />
               </button>
             )}
 
@@ -250,8 +266,8 @@ export function Header() {
                   msOverflowStyle: "none",      // IE, Edge
                 }}
                 className="
-                  container mx-auto px-4 py-2
-                  flex space-x-4
+                  container mx-auto px-4 py-3
+                  flex space-x-3
                   overflow-x-auto
                   scroll-smooth
                 "
@@ -262,11 +278,11 @@ export function Header() {
                   <Link
                     key={cat.id}
                     href={`/category/${cat.id}`}
-                    className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap
+                    className={`px-5 py-2 rounded-full text-[13px] font-semibold whitespace-nowrap border transition-all duration-300
                       ${
                         isActive
-                          ? "text-orange-600"
-                          : "text-gray-700 hover:text-orange-600 hover:bg-gray-100"
+                          ? "bg-gradient-to-r from-orange-500 to-orange-400 text-white border-transparent shadow-[0_4px_12px_rgba(249,115,22,0.3)]"
+                          : "bg-white text-slate-600 border-slate-200 hover:border-orange-500 hover:text-orange-600 shadow-sm"
                       }
                     `}
                   >
@@ -284,9 +300,9 @@ export function Header() {
                     behavior: "smooth",
                   })
                 }
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow rounded-full p-2"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-slate-100 rounded-full p-2 text-slate-500 hover:text-orange-500 transition-colors mr-2"
               >
-                <ChevronRight />
+                <ChevronRight size={18} />
               </button>
             )}
           </div>

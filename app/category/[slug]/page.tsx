@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ShoppingCart, Heart, Star, X, SlidersHorizontal } from "lucide-react";
 import Link from "next/link";
+import { CustomLoader } from "@/components/CustomLoader";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://softworktech.com/SIYAM/api';
 
@@ -299,9 +300,7 @@ export default function CategoryPage() {
             {/* Products Section */}
             <div className="lg:col-span-3">
               {loading ? (
-                <div className="flex items-center justify-center min-h-[350px]">
-                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-orange-500"></div>
-                </div>
+                <CustomLoader />
               ) : showEmpty ? (
                 <div className="flex flex-col items-center justify-center text-center bg-white border border-gray-200 rounded-3xl shadow-md p-8 md:p-12 min-h-[350px]">
                   <div className="text-6xl mb-4">🛒</div>

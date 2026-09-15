@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import React, { useState } from "react"
 import { TopBar } from "@/components/top-bar"
@@ -75,32 +75,34 @@ export default function ContactPage() {
       <div className="container mx-auto px-4 py-20 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-14">
           {/* LEFT SIDE INFO */}
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-800">Vtech Store Support Center</h2>
-            <p className="text-gray-600 leading-relaxed">
-              যেকোনো সহযোগিতা, পণ্য সংক্রান্ত তথ্য অথবা বাল্ক অর্ডারের বিষয়ে আমাদের সাথে যোগাযোগ করুন।
+          <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 h-full flex flex-col justify-center">
+            <h2 className="text-3xl font-bold text-gray-800">Dose care Support Center</h2>
+            <p className="text-gray-600 mt-4 leading-relaxed text-lg">
+              Have questions about our products or your order? Need help choosing the right gadget? Reach out to us. Our support team is here to assist you with anything you need.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-green-600/10 p-3 rounded-xl">
-                  <Phone className="h-6 w-6 text-green-700" />
+            <div className="mt-10 space-y-8">
+              {/* Phone */}
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+                  <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">ফোন</h3>
-                  <p className="text-gray-600 text-sm">+880 1953575880</p>
-                  <p className="text-gray-600 text-sm">+880 1784217430</p>
+                  <h4 className="text-xl font-semibold text-gray-800">Call Us</h4>
+                  <p className="text-gray-600 mt-1">Saturday - Thursday, 9:00 AM to 8:00 PM</p>
+                  <p className="text-gray-800 font-bold text-lg mt-1">+880 1784-217430</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-green-600/10 p-3 rounded-xl">
-                  <Mail className="h-6 w-6 text-green-700" />
+              {/* Email */}
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+                  <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800">ইমেইল</h3>
-                  <p className="text-gray-600 text-sm">contact@vtechstore.com</p>
-                  <p className="text-gray-600 text-sm">robiulrk485@gmail.com</p>
+                  <h4 className="text-xl font-semibold text-gray-800">Email Us</h4>
+                  <p className="text-gray-600 mt-1">We usually respond within 2-4 hours</p>
+                  <p className="text-gray-600 text-sm mt-1 font-medium">contact@dosecare.com</p>
                 </div>
               </div>
 

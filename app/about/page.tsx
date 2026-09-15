@@ -1,4 +1,4 @@
-﻿import { TopBar } from "@/components/top-bar"
+import { TopBar } from "@/components/top-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Image from "next/image"
@@ -25,44 +25,52 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
 
           {/* Content */}
-          <div className="relative z-10 text-center px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-center px-6"
+          >
             <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-wide drop-shadow-md">
-              Vtech Store
+              Dose care - About Us
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mt-4">
-              নিরাপদ, পুষ্টিকর ও বিশ্বস্ত কৃষিপণ্য — সরাসরি কৃষকের হাত থেকে।
+            <p className="text-xl text-gray-200 mt-4 max-w-2xl mx-auto leading-relaxed">
+              We are a dedicated team providing you with premium electronics, smart gadgets, and quality tech accessories at the best prices.
             </p>
-          </div>
+          </motion.div>
         </section>
 
         {/* 🍀 ABOUT SECTION */}
         <section className="py-20 px-6 md:px-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-            {/* Image */}
-            <div>
-              <Image
-                src="/logo.png"
-                alt="About Vtech Store"
-                width={650}
-                height={420}
-                className="rounded-3xl shadow-xl object-cover"
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }} 
+              animate={{ opacity: 1, x: 0 }} 
+              transition={{ delay: 0.2 }}
+              className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[450px]"
+            >
+              <Image 
+                src="/Hero.jpeg" 
+                alt="About Dose care" 
+                fill
+                className="object-cover"
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </motion.div>
 
-            {/* Text */}
-            <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6 leading-snug">
-                আমরা বিশ্বাস করি — **বিশুদ্ধ খাবারই স্বাস্থ্যকর জীবন।**
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                <span className="font-semibold text-green-600">Vtech Store</span> একটি বিশ্বস্ত কৃষিপণ্য
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }} 
+              animate={{ opacity: 1, x: 0 }} 
+              transition={{ delay: 0.4 }}
+              className="space-y-6 text-gray-700 text-lg leading-relaxed"
+            >
+              <p>
+                <span className="font-semibold text-orange-600">Dose care</span> is a trusted tech store
                 সরবরাহকারী প্রতিষ্ঠান, যারা দেশের বিভিন্ন অঞ্চলের
                 পরিশ্রমী কৃষকদের কাছ থেকে সরাসরি পণ্য সংগ্রহ করে।
                 আমরা নিশ্চিত করি যাতে পণ্যটি তার আসল স্বাদ, গন্ধ এবং
                 পুষ্টিমান অক্ষুণ্ণ রেখে ক্রেতার কাছে পৌঁছাতে পারে।
               </p>
-
               <p className="text-gray-600 leading-relaxed text-lg mt-4">
                 আমাদের লক্ষ্য — <span className="font-semibold text-gray-800">
                 কৃষকের ন্যায্য মূল্য নিশ্চিত করা এবং ক্রেতার হাতে বিশুদ্ধ পণ্য পৌঁছে দেওয়া।

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from 'react';
 import {
@@ -140,9 +140,9 @@ export function AdminChart({
   }
 
   return (
-    <Card className="shadow-sm border-gray-100">
+    <Card className="shadow-[0_8px_30px_rgba(0,0,0,0.04)] border-none rounded-2xl">
       <CardHeader className="pb-2">
-        <CardTitle className="text-base font-semibold text-gray-800">{title}</CardTitle>
+        <CardTitle className="text-base font-bold text-slate-800">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <div style={{ height, width: '100%' }}>

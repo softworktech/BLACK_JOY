@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from 'react';
 import { useAdmin } from '@/context/admin-context';
@@ -52,7 +52,7 @@ export default function AdminLogin() {
             <Leaf className="text-white h-8 w-8" />
           </div>
           <div className="space-y-1">
-            <CardTitle className="text-3xl font-bold tracking-tight">Vtech Store</CardTitle>
+            <CardTitle className="text-3xl font-bold tracking-tight">Dose care</CardTitle>
             <CardDescription className="text-slate-400 text-base">
               Secure Admin Login
             </CardDescription>
@@ -66,7 +66,7 @@ export default function AdminLogin() {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@vtechstore.com"
+                placeholder="admin@dosecare.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-slate-900/60 border-slate-700 h-12 text-base text-white placeholder:text-slate-500 focus-visible:ring-orange-500"

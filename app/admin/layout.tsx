@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
@@ -8,6 +8,7 @@ import { AdminHeader } from '@/components/admin/admin-header';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const pathname = usePathname();
 
   // Close sidebar on route change on mobile
@@ -40,14 +41,24 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {isLoginPage ? (
         children
       ) : (
-        <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
-          <AdminSidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+        <div className="min-h-screen bg-[#F8F9FA] flex flex-col font-sans text-slate-800">
+          <AdminSidebar 
+            isOpen={sidebarOpen} 
+            setIsOpen={setSidebarOpen} 
+            isCollapsed={isCollapsed}
+            setIsCollapsed={setIsCollapsed}
+          />
           
-          <div className="flex-1 flex flex-col lg:ml-[280px] transition-all duration-300">
-            <AdminHeader title={getPageTitle()} onMenuClick={() => setSidebarOpen(true)} />
+          <div className={`flex-1 flex flex-col transition-all duration-400 ease-[cubic-bezier(0.4,0,0.2,1)] ${isCollapsed ? 'lg:ml-[88px]' : 'lg:ml-[280px]'}`}>
+            <AdminHeader 
+              title={getPageTitle()} 
+              onMenuClick={() => setSidebarOpen(true)} 
+              isCollapsed={isCollapsed}
+              setIsCollapsed={setIsCollapsed}
+            />
             
             <main className="flex-1 p-4 md:p-6 lg:p-8">
-              <div className="max-w-7xl mx-auto w-full h-full">
+              <div className="max-w-[1600px] mx-auto w-full h-full">
                 {children}
               </div>
             </main>

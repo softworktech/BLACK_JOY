@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from 'react';
 import { Save, Loader2 } from 'lucide-react';
@@ -48,15 +48,15 @@ export default function AdminSettings() {
       } catch (error) {
         // Mock data
         setSettings({
-          site_name: 'Vtech Store',
-          site_tagline: 'Fresh from farm',
+          site_name: 'Dose care',
+          site_tagline: 'Your Trusted Tech Store',
           phone_1: '01711223344',
           phone_2: '01811223344',
-          email: 'info@vtechstore.com',
-          address: 'Rajshahi, Bangladesh',
+          email: 'info@dosecare.com',
+          address: 'Dhaka, Bangladesh',
           business_hours: '9:00 AM - 8:00 PM',
           whatsapp_url: 'https://wa.me/8801711223344',
-          facebook_url: 'https://facebook.com/vtechstore',
+          facebook_url: 'https://facebook.com/dosecare',
           youtube_url: '',
           play_store_url: '',
           delivery_rajshahi: '50',

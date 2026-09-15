@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useState, use } from "react";
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://softworktech.com/SIYAM/api';
@@ -215,9 +215,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8">
           {loading ? (
-            <div className="flex items-center justify-center min-h-[350px]">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-orange-500"></div>
-            </div>
+            <CustomLoader />
           ) : !product ? (
             <div className="flex flex-col items-center justify-center min-h-[350px] text-center">
               <h2 className="text-2xl font-bold text-gray-800 mb-2">Product Not Found</h2>
