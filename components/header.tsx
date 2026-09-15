@@ -177,7 +177,7 @@ export function Header() {
               <Image src="/logo.png" alt="Logo" fill className="object-contain p-1" />
             </div>
             <div className="hidden sm:flex flex-col justify-center">
-              <div className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 tracking-tight group-hover:from-orange-600 group-hover:to-orange-400 transition-all duration-300">Dose care</div>
+              <div className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-600 tracking-tight group-hover:from-orange-600 group-hover:to-orange-400 transition-all duration-300">Easy Point</div>
               <div className="text-[10px] font-bold text-slate-400 tracking-widest uppercase mt-0.5">
                 Your Trusted Tech Store
               </div>

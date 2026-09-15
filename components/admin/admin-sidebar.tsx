@@ -66,7 +66,7 @@ export function AdminSidebar({ isOpen, setIsOpen, isCollapsed = false, setIsColl
       >
         <div className={`flex items-center p-6 border-b border-slate-100/50 h-[72px] ${isCollapsed ? 'lg:justify-center justify-between' : 'justify-between'}`}>
           <div className={`flex flex-col ${isCollapsed ? 'lg:hidden' : 'flex'}`}>
-            <h1 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-orange-400 tracking-tight">Dose care</h1>
+            <h1 className="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-orange-400 tracking-tight">Easy Point</h1>
             <p className="text-[10px] uppercase text-slate-400 font-bold tracking-widest mt-0.5">Admin Panel</p>
           </div>
           {isCollapsed && (

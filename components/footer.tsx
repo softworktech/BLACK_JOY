@@ -14,9 +14,9 @@ export function Footer() {
         {/* Brand */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 col-span-full">
           <div>
-            <h2 className="text-xl md:text-2xl font-bold text-slate-800">Dose care</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-slate-800">Easy Point</h2>
             <p className="text-slate-600 mt-2 text-sm leading-relaxed">
-              Dose care is your trusted online shop for premium tech, gadgets, and electronics. Fast delivery & secure payments.
+              Easy Point is your trusted online shop for premium tech, gadgets, and electronics. Fast delivery & secure payments.
             </p>
           </div>
           <div>
@@ -68,7 +68,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-slate-200 mt-10 pt-6 pb-6 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} <span className="font-semibold text-slate-800">Dose care</span>. All Rights Reserved.
+        © {new Date().getFullYear()} <span className="font-semibold text-slate-800">Easy Point</span>. All Rights Reserved.
       </div>
     </footer>
   );

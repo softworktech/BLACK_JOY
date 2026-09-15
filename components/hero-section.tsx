@@ -120,7 +120,7 @@ export default function HeroSection() {
               transition={{ delay: 0.8, duration: 0.5 }}
               className="absolute -bottom-6 -left-6 sm:bottom-4 sm:-left-8 z-20 bg-white p-3 rounded-2xl shadow-xl border border-slate-100"
             >
-              <img src="/logo.png" alt="Dose care" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+              <img src="/logo.png" alt="Easy Point" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
             </motion.div>
 
             {/* Floating Discount Badge */}

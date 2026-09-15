@@ -27,7 +27,7 @@ export default function AboutPage() {
           {/* Content */}
           <div className="relative z-10 text-center px-6">
             <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-wide drop-shadow-md">
-              Dose care - About Us
+              Easy Point - About Us
             </h1>
             <p className="text-xl text-gray-200 mt-4 max-w-2xl mx-auto leading-relaxed">
               We are a dedicated team providing you with premium electronics, smart gadgets, and quality tech accessories at the best prices.
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[450px]">
               <Image 
                 src="/Hero.jpeg" 
-                alt="About Dose care" 
+                alt="About Easy Point" 
                 fill
                 className="object-cover"
               />
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
-                <span className="font-semibold text-orange-600">Dose care</span> is a trusted tech store, providing 100% authentic and original gadgets across Bangladesh. We source the best products from top brands to ensure quality and reliability.
+                <span className="font-semibold text-orange-600">Easy Point</span> is a trusted tech store, providing 100% authentic and original gadgets across Bangladesh. We source the best products from top brands to ensure quality and reliability.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mt-4">
                 Our Mission — <span className="font-semibold text-gray-800">

@@ -8,17 +8,17 @@ import { CartProvider } from "@/context/cart-context";
 
 // ✅ Server-side metadata
 export const metadata: Metadata = {
-  title: "Dose care",
+  title: "Easy Point",
   description:
-    "Dose care - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
+    "Easy Point - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
   keywords: [
-    "Dose care", "Tech gadgets", "Electronics Online Store",
+    "Easy Point", "Tech gadgets", "Electronics Online Store",
     "Smartphones", "Laptops", "Smart home devices",
     "Best electronics in BD", "Original gadgets",
   ],
-  authors: [{ name: "Dose care", url: "https://dosecare.com" }],
-  creator: "Dose care",
-  publisher: "Dose care",
+  authors: [{ name: "Easy Point", url: "https://dosecare.com" }],
+  creator: "Easy Point",
+  publisher: "Easy Point",
   metadataBase: new URL("https://dosecare.com"),
   alternates: {
     canonical: "/",
@@ -27,24 +27,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://dosecare.com",
-    title: "Dose care",
+    title: "Easy Point",
     description:
-      "Dose care - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
-    siteName: "Dose care",
+      "Easy Point - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
+    siteName: "Easy Point",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Dose care - Online Tech & Electronics Store",
+        alt: "Easy Point - Online Tech & Electronics Store",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dose care",
+    title: "Easy Point",
     description:
-      "Dose care - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
+      "Easy Point - Online shop for premium tech, gadgets, and electronics in Bangladesh. Fast delivery & secure payments.",
     site: "@DoseCare",
     creator: "@DoseCare",
     images: ["/og-image.jpg"],

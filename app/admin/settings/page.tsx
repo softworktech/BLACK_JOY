@@ -48,7 +48,7 @@ export default function AdminSettings() {
       } catch (error) {
         // Mock data
         setSettings({
-          site_name: 'Dose care',
+          site_name: 'Easy Point',
           site_tagline: 'Your Trusted Tech Store',
           phone_1: '01711223344',
           phone_2: '01811223344',

@@ -52,7 +52,7 @@ export default function AdminLogin() {
             <Leaf className="text-white h-8 w-8" />
           </div>
           <div className="space-y-1">
-            <CardTitle className="text-3xl font-bold tracking-tight">Dose care</CardTitle>
+            <CardTitle className="text-3xl font-bold tracking-tight">Easy Point</CardTitle>
             <CardDescription className="text-slate-400 text-base">
               Secure Admin Login
             </CardDescription>

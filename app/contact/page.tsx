@@ -76,7 +76,7 @@ export default function ContactPage() {
         <div className="grid lg:grid-cols-2 gap-14">
           {/* LEFT SIDE INFO */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 h-full flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-800">Dose care Support Center</h2>
+            <h2 className="text-3xl font-bold text-gray-800">Easy Point Support Center</h2>
             <p className="text-gray-600 mt-4 leading-relaxed text-lg">
               Have questions about our products or your order? Need help choosing the right gadget? Reach out to us. Our support team is here to assist you with anything you need.
             </p>
